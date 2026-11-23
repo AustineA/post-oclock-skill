@@ -360,7 +360,7 @@ const TOOLS = {
   list_projects: [listProjects, 'List the projects in the calendar (accounts, brands or clients) with how many posts each has.', {}, []],
   create_project: [createProject, 'Add a project to post for, or rename an existing one by giving its id.', {
     name: { ...TEXT, description: 'What the person calls it, such as Grain.' },
-    handle: { ...TEXT, description: 'The account handle, such as @thisisgrain.' },
+    handle: { ...TEXT, description: 'The account handle, such as @yourbrand.' },
     color: { ...TEXT, description: "A hex colour that marks the project's posts, such as #1F5BFF." },
     id: { ...TEXT, description: 'Leave out for a new project; one is made from the name.' } }, ['name']],
   list_grain_drafts: [listGrainDrafts, "List the stories saved in Grain on this Mac's iCloud account, newest first, to schedule as posts.", {}, []],
