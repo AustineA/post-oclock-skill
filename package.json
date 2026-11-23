@@ -1,0 +1,31 @@
+{
+  "name": "post-oclock-skill",
+  "version": "1.0.0",
+  "description": "Let your coding agent plan and schedule posts in your Post O'Clock content calendar.",
+  "bin": {
+    "post-oclock": "./bin/install.mjs"
+  },
+  "keywords": [
+    "ai-agent",
+    "claude-code",
+    "codex",
+    "skills",
+    "installer"
+  ],
+  "author": "AMANi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AustineA/post-oclock-skill"
+  },
+  "files": [
+    "bin/",
+    "skill/",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  }
+}
