@@ -401,12 +401,17 @@ function checked(name, args, properties, required) {
 const INSTRUCTIONS = "Post O'Clock is the person's content calendar, for one or more projects. Times are on their " +
   "phone's own clock. Call list_projects first and put each post in its project. " +
   "Look at list_posts before scheduling so new posts don't land on top of existing ones. " +
-  'Give every reel, video, story or carousel a suggested song in `music`.';
+  'Give every reel, video, story or carousel a suggested song in `music`. ' +
+  'When the person asks you to plan their content calendar (a week, a month or any batch of posts), or to rework one, ' +
+  'lay the plan out first as a calendar page they can review: an artifact if you can make one, otherwise a table in the chat. ' +
+  'Show every post with its day and time, platform and format, title, caption, hashtags, suggested song and media, ' +
+  'and for a rework mark what changed and what would be removed. Call schedule_post, update_post or delete_post ' +
+  'for that plan only after they approve it, then update the page to match what was saved.';
 
 function answer({ method, params = {} }) {
   if (method === 'initialize') {
     return { protocolVersion: params.protocolVersion || '2025-06-18', capabilities: { tools: {} },
-             serverInfo: { name: 'postoclock', title: "Post O'Clock", version: '1.1.1' }, instructions: INSTRUCTIONS };
+             serverInfo: { name: 'postoclock', title: "Post O'Clock", version: '1.1.2' }, instructions: INSTRUCTIONS };
   }
   if (method === 'ping') return {};
   if (method === 'tools/list') {

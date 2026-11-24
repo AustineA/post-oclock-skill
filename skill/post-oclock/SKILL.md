@@ -33,6 +33,23 @@ The tools: `list_projects`, `create_project`, `list_posts`, `get_post`, `schedul
 `update_post`, `delete_post`, `mark_posted`, `list_grain_drafts`. Run `tools` for their arguments
 rather than guessing.
 
+## Plan in a calendar page first
+
+When the user asks you to plan their content calendar (a week, a month, a campaign or any batch of
+posts), or to rework a plan that's already there, don't write to the calendar yet:
+
+1. Read what's there with `list_projects` and `list_posts`, so the plan fits around existing posts.
+2. Lay the whole plan out as a calendar page the user can review: an artifact if your client can make
+   one, otherwise a table in the chat. Show the days as a calendar, and for every post its day and time,
+   platform and format, title, caption, hashtags, suggested song and media.
+3. For a rework, mark what changed (old and new time or words side by side) and list the posts that
+   would be removed, each with its reason.
+4. Wait for the user to approve or correct it. Revise the page until they do.
+5. Only then call `schedule_post`, `update_post` and `delete_post`, and update the page so it matches
+   what was saved.
+
+A single post the user dictates ("put this reel on Friday at 6") goes straight in; the page is for plans.
+
 ## How to schedule well
 
 - Run `list_projects` first and put each post in its project (`project` is the id). If the user names
