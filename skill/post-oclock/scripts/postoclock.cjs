@@ -64,7 +64,7 @@ function local(files, what) {
   if (waiting.length) {
     download(waiting);
     throw new Refused(`${waiting.length} ${what} ${waiting.length === 1 ? "hasn't" : "haven't"} downloaded from iCloud to this Mac yet. ` +
-                      "I've asked iCloud for them. Try again in a minute.");
+                      "I've asked iCloud for them. Try again in a minute; if this keeps happening, restarting the Mac gets iCloud downloading again.");
   }
   return files;
 }
@@ -406,7 +406,7 @@ const INSTRUCTIONS = "Post O'Clock is the person's content calendar, for one or 
 function answer({ method, params = {} }) {
   if (method === 'initialize') {
     return { protocolVersion: params.protocolVersion || '2025-06-18', capabilities: { tools: {} },
-             serverInfo: { name: 'postoclock', title: "Post O'Clock", version: '1.1.0' }, instructions: INSTRUCTIONS };
+             serverInfo: { name: 'postoclock', title: "Post O'Clock", version: '1.1.1' }, instructions: INSTRUCTIONS };
   }
   if (method === 'ping') return {};
   if (method === 'tools/list') {

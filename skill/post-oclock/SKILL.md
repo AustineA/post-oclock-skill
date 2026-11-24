@@ -54,6 +54,8 @@ rather than guessing.
 
 If a reply says files "haven't downloaded from iCloud to this Mac yet", the script has already asked
 iCloud for them. Wait about a minute and run the same command once more. If it still says so, tell
-the user to open the Post O'Clock folder in Finder's iCloud Drive and choose Download Now.
+the user that restarting the Mac gets iCloud downloading again. To keep the calendar on the Mac for
+good, they can Control-click the Post O'Clock folder in iCloud Drive in Finder and choose Keep
+Downloaded.
 
 `POSTOCLOCK_DIR` points the script at another folder, such as a simulator's Documents, for testing.
